@@ -11,10 +11,11 @@ import ProtectedRoute from './Components/Help/ProtectedRoute';
 import Photo from './Components/Photo/Photo';
 import UserProfile from './Components/User/UserProfile';
 import NotFound from './Components/NotFound';
+
 const App = () => {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <UserStorage>
           <Header />
           <main className='AppBody'>
@@ -34,10 +35,9 @@ const App = () => {
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
-
           <Footer />
         </UserStorage>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };
